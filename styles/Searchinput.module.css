@@ -1,0 +1,60 @@
+/* styles/SearchInput.module.css */
+
+.container {
+  position: relative;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.input {
+  width: 70%;
+  padding: 10px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #334155;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  text-align: left; /* Ensures placeholder text is left-aligned */
+}
+
+.input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.dropdown {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  margin-top: 4px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-height: 240px;
+  overflow-y: auto;
+  list-style-type: none;
+  padding: 0.5rem 0;
+  top: calc(100% + 8px);
+}
+
+.dropdownItem {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.95rem;
+  color: #475569;
+  text-align: left;
+}
+
+.dropdownItem:hover {
+  background-color: #f1f5f9;
+}

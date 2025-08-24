@@ -1,0 +1,178 @@
+/* styles/Home.module.css */
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f1f5f9; /* A softer background color */
+}
+
+.sidebar {
+  width: 350px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1), 0 5px 10px -5px rgba(0, 0, 0, 0.05);
+  transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  z-index: 20;
+}
+
+.sidebar.collapsed {
+  width: 0;
+  box-shadow: none;
+}
+
+.sidebarContent {
+  padding: 2.5rem 2rem;
+  width: 350px;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarToggle {
+  position: fixed;
+  top: 50%;
+  left: 350px;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: none;
+  border-radius: 0 50% 50% 0;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: left 0.3s ease-in-out, background-color 0.2s;
+}
+
+.sidebarToggle:hover {
+  background-color: #f1f5f9;
+}
+
+.sidebarToggle svg {
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(0deg);
+  color: #64748b;
+}
+
+.sidebarToggle.sidebarToggleCollapsed {
+  left: 0;
+}
+
+.sidebarToggle.sidebarToggleCollapsed svg {
+  transform: rotate(180deg);
+}
+
+.controlSection {
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.mainTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.05em;
+  text-align: left; /* Aligned left as per the Figma design */
+}
+
+.navigationSection {
+  background-color: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 2 4px 6px -1px rgba(4, 58, 234, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.25rem;
+  text-align: left; /* Aligned left as per the Figma design */
+}
+
+.navigateButton {
+  background-color: #10b981;
+  color: #fff;
+  padding: 12px 20px;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+  margin-top: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navigateButton:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.clearRouteButton {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #ef4444;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.clearRouteButton:hover {
+  background-color: #dc2626;
+}
+
+.mapContainer {
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+
+.mapGpsButton {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.gpsIcon {
+  height: 24px;
+  width: 24px;
+  color: #4b5563;
+}
